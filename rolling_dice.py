@@ -1,10 +1,14 @@
 import random
+def roll_again():
+    b=random.randint(1,6)
+    print("the number on dice is :",b)
+    again=int(input("Enter 1 to roll again and 2 for EXIT : "))
+    if again==1:
+      roll_again() 
+user=int(input("Enter 1 to Roll the dice : "))
 a=random.randint(1,6)
-choose=int(input("Enter no of your choice between 1 to 6 : "))
-print("your number",choose)
-print("My number",a)
-if choose== a :
-    print("Your Number Mathched With My Number ")
-else :
-    print("Your Number Not Matched With Mine")
-    print('Better luck next time ')
+if user==1:
+    print("the number on dice is :",a)
+again=int(input("Enter 1 to roll again"))
+if again==1:
+    roll_again()
